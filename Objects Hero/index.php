@@ -1,20 +1,20 @@
 <?php
 
-require 'Specialite.php';
-require 'personnage/hero1.php';
-require 'personnage/hero2.php';
+require 'Hero.php';
+require 'personnage/chevalier.php';
+require 'personnage/viking.php';
 
-$hero1 = new Hero1();
+$chevalier = new Chevalier();
 
-$hero1->setArme('epee');
-$hero1->setPv(100);
+$chevalier->setArme('Epee');
+$chevalier->setPv(100);
 
-var_dump($hero1->display("Viking"));
+var_dump($chevalier->display("Chevalier"));
 
-$hero2 = new Hero2();
+$viking = new Viking();
 
-$hero2->setArme('hache');
-$hero2->setPv(100);
+$viking->setArme('Hache');
+$viking->setPv(100);
 
-var_dump($hero2->display());
+var_dump($viking->display());
 

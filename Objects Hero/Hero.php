@@ -1,6 +1,6 @@
 <?php
 
-class Specialite {
+class Hero {
     private $arme;
     private $pv;
 
