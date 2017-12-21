@@ -1,17 +1,21 @@
 <?php
 include ('index.php');
 
+require 'user.php';
+$user = new User();
+
 if (isset($_POST['email']) && isset($_POST['password']))
 {
 	if (!empty($_POST['email']) && !empty($_POST['password']))
 	{
-		if(($_POST['email'] == $user_email) && ($_POST['password'] == $user_password))
+		if(($_POST['email'] == $user->getEmail()) && ($_POST['password'] == $user->getPassword()))
 		{
 			session_start();
-			$_SESSION['nom'] = $user_lastname;
-			$_SESSION['prenom'] = $user_firstname;
-			$_SESSION['email'] = $user_email;
-			$_SESSION['password'] = $user_password;
+			
+			$_SESSION['nom'] = $user->getNom();
+			$_SESSION['prenom'] = $user->getPrenom();
+			$_SESSION['email'] = $user->getEmail();
+			$_SESSION['password'] = $user->getPassword();
 
 			header('Location: dashboard.php'); //succès je vais au dashboard
 		} 
@@ -20,10 +24,7 @@ if (isset($_POST['email']) && isset($_POST['password']))
 	}
 	else
 		header('Location: index.php?message=erreur'); //erreur je retourne à l'accueil
-		
 }
 else 
-{
 	header('Location: index.php?message=erreur'); //erreur je retourne à l'accueil
-}
 ?>

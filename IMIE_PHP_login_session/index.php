@@ -27,6 +27,7 @@ if (isset($_GET['message'])) {
     }
 }
 ?>
+
 <form action="traitement.php" method="POST">
 <label>Email
 <input name="email"></input></label>
