@@ -14,7 +14,14 @@ if (isset($_GET['message'])) {
     if ($_GET['message'] == 'erreur') {
         ?>
         <div style="background-color: red; color:white; border:2px solid black;">
-                Identifiants incorrects.
+            Identifiants incorrects.
+        </div><br />
+        <?php               
+    }
+    if ($_GET['message'] == 'erreur1') {
+        ?>
+        <div style="background-color: red; color:white; border:2px solid black;">
+            Vous devez vous connecter pour accèder à cette page !
         </div><br />
         <?php               
     }

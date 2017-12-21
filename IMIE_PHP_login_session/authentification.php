@@ -3,7 +3,7 @@
 function verifDroits() 
 {
 	if (!isset($_SESSION['nom']) && !isset($_SESSION['prenom']) && !isset($_SESSION['password']) && !isset($_SESSION['email'])) {
-		header ('Location: index.php?message=erreur');
+		header ('Location: index.php?message=erreur1');
 	}
 }
 ?>
