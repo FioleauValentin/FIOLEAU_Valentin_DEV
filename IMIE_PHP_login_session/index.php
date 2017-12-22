@@ -5,11 +5,6 @@ if (session_status() == PHP_SESSION_NONE) {
    session_start();
 }
 
-$user_lastname = "DOE";
-$user_firstname = "John";
-$user_email = "John.doe@domain.tld";
-$user_password = "mdpsupersecure";
-
 if (isset($_GET['message'])) {
     if ($_GET['message'] == 'erreur') {
         ?>

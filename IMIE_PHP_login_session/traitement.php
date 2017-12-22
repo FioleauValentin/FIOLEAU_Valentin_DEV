@@ -2,6 +2,7 @@
 include ('index.php');
 
 require 'user.php';
+
 $user = new User();
 
 if (isset($_POST['email']) && isset($_POST['password']))
@@ -11,10 +12,10 @@ if (isset($_POST['email']) && isset($_POST['password']))
 		if(($_POST['email'] == $user->getEmail()) && ($_POST['password'] == $user->getPassword()))
 		{
 			session_start();
-			
-			$_SESSION['nom'] = $user->getNom();
-			$_SESSION['prenom'] = $user->getPrenom();
-			$_SESSION['email'] = $user->getEmail();
+
+			$_SESSION['nom']      = $user->getNom();
+			$_SESSION['prenom']   = $user->getPrenom();
+			$_SESSION['email']    = $user->getEmail();
 			$_SESSION['password'] = $user->getPassword();
 
 			header('Location: dashboard.php'); //succès je vais au dashboard
